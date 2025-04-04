@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, Link } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -6,8 +6,14 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   return (
-    <div className="p-2">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className="flex h-screen flex-col items-center justify-center text-center">
+      <h1 className="font-impact mb-8 text-6xl">Jeopardy Scorer</h1>
+      <Link to="/join" className="btn-pill">
+        Join as Buzzer
+      </Link>
+      <Link to="/score" className="btn-pill">
+        Start a New Game
+      </Link>
     </div>
   );
 }
